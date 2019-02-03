@@ -112,7 +112,7 @@ defmodule Pushest.Socket do
   Handles varios Pusher events, updates state and tries to call user-defined callbacks.
   """
   def handle_info(
-        {:gun_ws, _conn_pid, {:text, raw_frame}},
+        {:gun_ws, _conn_pid, _stream_ref, {:text, raw_frame}},
         state = %State{
           channels: channels,
           presence: presence,
