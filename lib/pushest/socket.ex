@@ -104,7 +104,7 @@ defmodule Pushest.Socket do
   end
 
   @spec handle_info(term, %State{}) :: {:noreply, %State{}}
-  def handle_info({:gun_ws_upgrade, _conn_pid, :ok, _headers}, state) do
+  def handle_info({:gun_upgrade, _conn_pid, :ok, _headers}, state) do
     {:noreply, state}
   end
 
