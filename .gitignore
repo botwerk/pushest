@@ -16,8 +16,22 @@
 # If the VM crashes, it generates a dump, let's ignore it too.
 erl_crash.dump
 
+# ignores the cachex dump too
+botex_cache.dump
+
 # Also ignore archive artifacts (built via "mix archive.build").
 *.ez
+
+# Ignore package tarball (built via "mix hex.build").
+botex-*.tar
+
+botex.iml
+botex.pid
+*sqlite3*
+.DS_Store
+/.vscode
+/.idea
+/.elixir_ls
 
 # Ignore package tarball (built via "mix hex.build").
 pushest-*.tar
