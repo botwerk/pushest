@@ -104,7 +104,7 @@ defmodule Pushest.Api do
         {:gun_down, _conn_pid, _protocol, reason, _killed_streams, _unprocessed_streams},
         state
       ) do
-    Logger.warn(":gun_down #{inspect(reason)}")
+    Logger.debug(":gun_down #{inspect(reason)}")
     {:noreply, state}
   end
 
