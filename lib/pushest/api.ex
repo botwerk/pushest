@@ -101,10 +101,10 @@ defmodule Pushest.Api do
   end
 
   def handle_info(
-        {:gun_down, _conn_pid, _protocol, reason, _killed_streams, _unprocessed_streams},
+        {:gun_down, _conn_pid, _protocol, _reason, _killed_streams, _unprocessed_streams},
         state
       ) do
-    Logger.debug(":gun_down #{inspect(reason)}")
+    # Logger.debug(":gun_down #{inspect(reason)}")
     {:noreply, state}
   end
 
@@ -113,8 +113,8 @@ defmodule Pushest.Api do
     {:noreply, state}
   end
 
-  def handle_info({:gun_up, _conn_pid, protocol}, state) do
-    Logger.debug(fn -> "Api | :gun_up #{inspect(protocol)}" end)
+  def handle_info({:gun_up, _conn_pid, _protocol}, state) do
+    # Logger.debug(fn -> "Api | :gun_up #{inspect(protocol)}" end)
     {:noreply, state}
   end
 
